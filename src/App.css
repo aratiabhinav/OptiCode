@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+#Styling
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.compiler-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editor-container, .output-container {
+  width: 45%;
+}
+
+textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

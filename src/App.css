@@ -186,3 +186,244 @@ pre {
   padding: 10px;
   border: 1px solid #ddd;
 }
+
+
+
+/* code write css num */
+
+/* .code-editor-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.line-numbers {
+  padding: 10px 5px;
+  background-color: #f1f1f1;
+  color: #555;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #ddd;
+}
+
+.line-number {
+  height: 1.4em;
+  line-height: 1.4em;
+  font-size: 14px;
+}
+
+.code-area {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4em;
+  resize: none;
+  background-color: transparent;
+}
+
+.code-area::placeholder {
+  color: #aaa;
+}
+
+.code-area:focus {
+  outline: none;
+} */
+
+.code-editor-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  height: 400px; /* Set a fixed height for the editor */
+}
+
+.line-numbers {
+  padding: 10px 5px;
+  background-color: #f1f1f1;
+  color: #555;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #ddd;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Take full height */
+}
+
+.line-number {
+  height: 1.4em;
+  line-height: 1.4em;
+  font-size: 14px;
+}
+
+.code-area {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4em;
+  resize: none;
+  background-color: transparent;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; /* Take full height */
+}
+
+.code-area::placeholder {
+  color: #aaa;
+}
+
+.code-area:focus {
+  outline: none;
+}
+
+
+
+
+
+/* OutputSection */
+
+.output-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: monospace;
+  background-color: #f9f9f9;
+  height: 400px; /* Fixed height to match the code editor */
+  overflow: hidden;
+}
+
+.output-header {
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.output-area {
+  flex: 1;
+  overflow-y: auto; /* Add scroll behavior */
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.output-content {
+  margin: 0;
+  white-space: pre-wrap; /* Preserve formatting but wrap text */
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+
+/* Review Code css */
+.compiler-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.editor-container {
+  position: relative; /* Relative position to place the button */
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-button-wrapper {
+  position: absolute;
+  top: -36px; /* Move it above the container */
+  right: 10px;
+  z-index: 10;
+}
+
+.review-button-wrapper button {
+  background-color: #007bff; /* Example blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.review-button-wrapper button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.output-container {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* LanguageDropdown css */
+.language-dropdown-wrapper {
+  position: absolute;
+  top: -25px; /* Align with Review Code button */
+  left: 10px; /* Position to the left */
+  z-index: 10;
+}
+
+.language-dropdown {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+  appearance: none; /* Removes default styling in browsers */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 width=%2216%22 height=%2216%22%3E%3Cpath fill=%22%23ffffff%22 d=%22M4.293 5.293a1 1 0 0 1 1.414 0L8 7.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-3 3a1 1 0 0 1-1.414 0l-3-3a1 1 0 0 1 0-1.414z%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the dropdown symbol */
+  background-size: 12px 12px; /* Adjust the size of the dropdown symbol */
+}
+
+.language-dropdown:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.language-dropdown:focus {
+  outline: 2px solid #004085; /* Focus outline for accessibility */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

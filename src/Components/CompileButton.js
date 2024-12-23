@@ -12,16 +12,17 @@ function CompileButton({ code, language, setOutput }) {
       clientSecret: JDoodle_CLIENT_SECRET,
       script: code,
       language: language,
-      versionIndex: '0', // Example for Python version
+      versionIndex: 0, // Example for Python version
     };
       console.log(code);
-    try {
-      const response = await axios.post(JDoodle_API_URL, data);
-      setOutput(response.data.output);
-    } catch (error) {
-      console.log(error)
-      setOutput('Error executing the code');
-    }
+      try {
+        const response = await axios.post('/v1/execute', data);
+        console.log(response.data)
+        setOutput(response.data.output);
+      } catch (error) {
+        console.log(error)
+        setOutput('Error executing the code');
+      }
   };
 
   return (

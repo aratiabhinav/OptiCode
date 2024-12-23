@@ -96,7 +96,7 @@ function ReviewButton({ code, language, setresult }) {
   const handleReview = async () => {
     const payload = {
       contents: [
-        { parts: [{ text: `Summarize and review the following code in ${language}:\n${code}` }] },
+        { parts: [{ text: `Optimize ,Summarize and review the following code in ${language}:\n${code}` }] },
       ],
     };
 

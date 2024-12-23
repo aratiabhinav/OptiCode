@@ -16,9 +16,15 @@ function App() {
 
   return (
     <Router>
-      <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60px', backgroundColor: '#007bff' }}>
+      {/* <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60px', backgroundColor: '#007bff' }}>
   <h1 style={{ margin: 0, color: 'white', fontSize: '24px' }}>OptiCode</h1>
-</nav>
+</nav> */}
+        <nav style={{display: "flex",alignItems: "center",height: "60px",backgroundColor: "#007bff",position: "relative",padding: "0 20px",}}>
+     <img src="/logo1234.png" alt="Logo" style={{ height: "55px", width: "55px" }}/>
+        <h1 style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", margin: 0, color: "white", fontSize: "24px",}}>
+          OptiCode
+        </h1>
+      </nav>
 
       <div className="App">
         
